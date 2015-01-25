@@ -13,7 +13,7 @@ end
 
 post("/tasks") do
   description = params.fetch("description")
-  @task = Task.new({:description => description})
+  @task = Task.new({:description => description, :done => false})
   @task.save()
   erb(:success)
 end
