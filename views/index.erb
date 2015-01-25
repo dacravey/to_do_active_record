@@ -3,9 +3,9 @@
 <p>Here are all your tasks:</p>
 
 <ul>
-  <% @tasks.each do |task| %>
-    <li><%= task.description %></li>
-    <% end %>
+  <% @tasks.not_done().each do |task| %>
+  <li><%= task.description %></li>
+  <% end %>
 </ul>
 
 <p>Create a new task:</p>
